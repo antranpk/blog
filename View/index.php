@@ -43,7 +43,7 @@
   </div>
   
   <!-- Posts -->
-  <div class="w3-card-2 w3-margin" style="height: 700px;overflow: scroll;">
+  <div class="w3-card-2 w3-margin" style="max-height: 700px;overflow: scroll;">
     <div class="w3-container w3-padding">
       <h4>All Posts</h4>
     </div>
