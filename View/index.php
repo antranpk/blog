@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-    <hr class="clear" /><br />
+    <hr class="clear" />
     <?php endforeach ?>
   </div>  
     <div class="w3-col l4">
@@ -37,13 +37,13 @@
   <img src="public/upload/avatar.jpg" style="width:100%">
     <div class="w3-container w3-white">
       <h4><b>Tony Tran</b></h4>
-      <p>Tony không chỉ là đôi mắt đẹp, tâm hồn đẹp, sống đẹp, mà mọi thứ của An đều đẹp.</p>
-      <p>Don't ask me, Who is she? She just a beautiful girl and she always in my heart. There is only one happiness in this life, To LOVE and be LOVED</p>
+      <p>Tình yêu là nguồn sức mạnh vĩnh cửu.</p>
+      <p>Don't ask me, Who is she? She just a beautiful girl and she forever in my heart. There is only one happiness in this life, To LOVE and be LOVED</p>
     </div>
-  </div><hr>
+  </div>
   
   <!-- Posts -->
-  <div class="w3-card-2 w3-margin">
+  <div class="w3-card-2 w3-margin" style="height: 700px;overflow: scroll;">
     <div class="w3-container w3-padding">
       <h4>All Posts</h4>
     </div>
@@ -52,7 +52,7 @@
       <li class="w3-padding-16">
         <img src="public/upload/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large"><a href="<?=ROOT_URL?>?p=blog&amp;a=post&amp;id=<?=$post->id?>"><?=htmlspecialchars($post->title)?></a></span><br>
-        <span><?=nl2br(htmlspecialchars(mb_strimwidth($post->body, 0, 90, '...')))?></span>
+        <span><?=nl2br(htmlspecialchars(mb_strimwidth($post->body, 0, 120, '...')))?></span>
       </li>
       <?php endforeach ?>
     </ul>
