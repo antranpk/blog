@@ -28,7 +28,7 @@ class Blog
 
     public function add(array $aData)
     {
-        $oStmt = $this->oDb->prepare('INSERT INTO Posts (title, body, createdDate) VALUES(:title, :body, :created_date)');
+        $oStmt = $this->oDb->prepare('INSERT INTO Posts (title, body, image, createdDate) VALUES(:title, :body, :image, :created_date)');
         return $oStmt->execute($aData);
     }
 
@@ -42,10 +42,11 @@ class Blog
 
     public function update(array $aData)
     {
-        $oStmt = $this->oDb->prepare('UPDATE Posts SET title = :title, body = :body WHERE id = :postId LIMIT 1');
+        $oStmt = $this->oDb->prepare('UPDATE Posts SET title = :title, body = :body, image = :image WHERE id = :postId LIMIT 1');
         $oStmt->bindValue(':postId', $aData['post_id'], \PDO::PARAM_INT);
         $oStmt->bindValue(':title', $aData['title']);
         $oStmt->bindValue(':body', $aData['body']);
+        $oStmt->bindValue(':image', $aData['image']);
         return $oStmt->execute();
     }
 

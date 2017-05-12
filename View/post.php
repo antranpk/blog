@@ -7,7 +7,11 @@
 
     <article>
         <div class="w3-card-4 w3-margin w3-white">
-        <img src="public/upload/woods.jpg" alt="Nature" style="width:100%">
+        <?php if ($this->oPost->image) { ?>
+          <img src="<?php echo ROOT_URL_IMAGE . $this->oPost->image ?>" alt="Nature" style="width:100%; height: 300px">
+        <?php } else {?>
+          <img src="public/upload/woods.jpg" alt="Nature" style="width:100%">
+        <?php } ?>
         <div class="w3-container">
           <h3><b><?=htmlspecialchars($this->oPost->title)?></b></h3>
           <h5>Posted on: <span class="w3-opacity"><?=$this->oPost->createdDate?></span></h5>
